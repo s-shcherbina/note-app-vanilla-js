@@ -1,5 +1,3 @@
-// /import { $modalEl } from './index3.js';
-
 export const $modalEl = document.querySelector('.modal'),
   $closeBtn = $modalEl.querySelector('.modal-close');
 

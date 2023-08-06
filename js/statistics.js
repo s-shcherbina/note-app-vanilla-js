@@ -1,6 +1,5 @@
 import { base } from './index.js';
-import { categories } from './moks.js';
-import { summary } from './moks.js';
+import { categories, summary } from './moks.js';
 
 const $summaryBar = document.querySelector('#summary-bar'),
   $summaryList = document.querySelector('#summary');

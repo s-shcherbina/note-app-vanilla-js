@@ -51,9 +51,3 @@ export const toggleArchiveVisible = (e) => {
     e.target.innerText === 'Show Archive' ? 'Hide Archive' : 'Show Archive';
   $archive.classList.toggle('hidden');
 };
-
-// $activeNotes.addEventListener('click', archivedNote);
-// $archiveNotes.addEventListener('click', unArchivedNote);
-// $activeBar.addEventListener('click', archivedNotes);
-// $archiveBar.addEventListener('click', unArchivedNotes);
-// $archiveBtn.addEventListener('click', toggleArchiveVisible);
