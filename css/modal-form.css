@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  padding: 30px;
+  display: none;
+}
+
+.modal-main {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background-color: #fff;
+  margin: auto;
+  color: #000;
+  border-radius: 16px;
+  padding: 20px 30px 30px;
+  cursor: default;
+}
+
+.modal-title {
+  font-size: 36px;
+  margin: 16px auto;
+}
+
+.modal-close {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.form-label {
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  height: 48px;
+  font-size: 24px;
+}

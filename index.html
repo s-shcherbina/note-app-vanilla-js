@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal-form.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,23 +18,57 @@
     <title>Notes App</title>
   </head>
   <body>
-    <div class="container">
-      <section class="top_bar"></section>
-    </div>
-    <!-- <div class="container">
-      <div class="header">
-         <h1>Notes App</h1>
-        <button class="note-add" type="button">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <button class="note-add" type="button">+</button>
-      </div>
-      <div class="notes"></div>
-    </div>
-    <span class="material-icons md-dark md-inactive md-36">psychology</span>
-    <span class="material-icons md-dark">face</span>
-    <span class="material-icons md-48">face</span> -->
+    <section class="container">
+      <header class="shell top-bar"></header>
+      <ol class="notes"></ol>
+      <button class="btn" type="button" id="create-btn">Create Note</button>
+    </section>
 
-    <script src="js/index.js"></script>
+    <section class="container">
+      <header class="shell top-bar" id="summary-bar">
+        <div class="headers indents">
+          <p class="width-category">Note Category</p>
+          <p class="width-name">Active</p>
+          <p class="width-name">Archived</p>
+        </div>
+      </header>
+      <ol class="notes" id="summary"></ol>
+      <button class="btn" type="button" id="archive-btn">Show Archive</button>
+    </section>
+
+    <section class="container hidden" id="archive">
+      <header class="shell top-bar" id="archive-bar"></header>
+      <ol class="notes" id="archive-notes"></ol>
+    </section>
+
+    <div class="modal">
+      <div class="modal-main">
+        <span class="material-icons md-24 modal-close">close</span>
+        <h2 class="modal-title">Create Note</h2>
+
+        <form class="note-form">
+          <label class="form-label" for="category">Category</label>
+          <select class="form-input" id="category" name="category" required>
+            <option value="Task">Task</option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+            <option value="Quote">Quote</option>
+          </select>
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" id="name" name="name" required />
+          <label class="form-label" for="content">Content</label>
+          <input class="form-input" id="content" name="content" required />
+          <button class="btn" type="submit" id="form-btn">Create Note</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/moks.js" type="module"></script>
+    <script src="js/statistics.js" type="module"></script>
+    <script src="js/add-notes.js" type="module"></script>
+    <script src="js/remove-notes.js" type="module"></script>
+    <script src="js/edit-notes.js" type="module"></script>
+    <script src="js/modal.js" type="module"></script>
   </body>
 </html>
