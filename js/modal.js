@@ -1,5 +1,6 @@
 export const $modalEl = document.querySelector('.modal'),
-  $closeBtn = $modalEl.querySelector('.modal-close');
+  $closeBtn = $modalEl.querySelector('.modal-close'),
+  $titleModal = $modalEl.querySelector('.modal-title');
 
 export const openModal = () => {
   $modalEl.style.visibility = 'visible';

@@ -6,7 +6,7 @@ import {
   $archiveBar,
   $archiveNotes,
 } from './index.js';
-import { $modalEl, openModal } from './modal.js';
+import { $modalEl, openModal, $titleModal } from './modal.js';
 
 export const $noteForm = document.querySelector('.note-form'),
   $name = $noteForm.querySelector('#name'),
@@ -16,7 +16,10 @@ export const $noteForm = document.querySelector('.note-form'),
 
 export const createNote = () => {
   $formBtn.innerText = 'Create Note';
+  $titleModal.innerText = 'Create Note';
+
   openModal();
+
   $noteForm.addEventListener('submit', addNote);
 };
 

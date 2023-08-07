@@ -1,5 +1,5 @@
 import { base } from './index.js';
-import { openModal, $modalEl } from './modal.js';
+import { openModal, $modalEl, $titleModal } from './modal.js';
 import {
   $noteForm,
   $name,
@@ -12,6 +12,7 @@ export const editData = (e) => {
   const editBtn = e.target;
   if (editBtn.innerText === 'edit') {
     const li = editBtn.closest('.note');
+    $titleModal.innerText = 'Edit Note';
     $formBtn.innerText = 'Edit Note';
 
     $name.value = li.firstElementChild.children[1].textContent;
